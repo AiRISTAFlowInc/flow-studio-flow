@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/engine/runner"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/engine/runner"
 
-	"github.com/project-flogo/core/action"
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/app/resource"
-	"github.com/project-flogo/core/support/test"
-	"github.com/project-flogo/flow"
-	"github.com/project-flogo/flow/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/action"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/app/resource"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/test"
+	"github.com/AiRISTAFlowInc/flow-studio-flow"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -24,7 +24,7 @@ var jsonFlowRes1 = `{
     {
       "id": "runFlow",
       "activity": {
-        "ref": "github.com/project-flogo/flow/activity/subflow",
+        "ref": "github.com/AiRISTAFlowInc/flow-studio-flow/activity/subflow",
         "settings": {
           "flowURI": "res://flow/flow2"
         },
@@ -75,7 +75,7 @@ var jsonFlow1 = `{
     {
       "id": "runFlow",
       "activity": {
-        "ref": "github.com/project-flogo/flow/activity/subflow",
+        "ref": "github.com/AiRISTAFlowInc/flow-studio-flow/activity/subflow",
         "settings": {
           "flowURI": "res://flow:flow2"
         },
@@ -128,7 +128,7 @@ func TestRegister(t *testing.T) {
 
 func TestSettings(t *testing.T) {
 
-	f := action.GetFactory("github.com/project-flogo/flow")
+	f := action.GetFactory("github.com/AiRISTAFlowInc/flow-studio-flow")
 	af := f.(*flow.ActionFactory)
 
 	err := initActionFactory(af)
@@ -156,7 +156,7 @@ func TestSettings(t *testing.T) {
 
 func TestDynamicIO(t *testing.T) {
 
-	f := action.GetFactory("github.com/project-flogo/flow")
+	f := action.GetFactory("github.com/AiRISTAFlowInc/flow-studio-flow")
 	af := f.(*flow.ActionFactory)
 
 	err := initActionFactory(af)
@@ -181,7 +181,7 @@ func TestDynamicIO(t *testing.T) {
 
 func TestSubFlow(t *testing.T) {
 
-	f := action.GetFactory("github.com/project-flogo/flow")
+	f := action.GetFactory("github.com/AiRISTAFlowInc/flow-studio-flow")
 	af := f.(*flow.ActionFactory)
 
 	err := initActionFactory(af)

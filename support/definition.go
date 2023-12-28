@@ -2,9 +2,10 @@ package support
 
 import (
 	"fmt"
-	"github.com/project-flogo/core/app/resource"
-	"github.com/project-flogo/flow/definition"
 	"strings"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/app/resource"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
 )
 
 // todo fix this

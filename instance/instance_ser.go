@@ -2,8 +2,9 @@ package instance
 
 import (
 	"encoding/json"
-	"github.com/project-flogo/core/support"
-	"github.com/project-flogo/flow/model"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/support"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 )
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

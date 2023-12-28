@@ -1,8 +1,8 @@
 package util
 
 import (
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
 	"github.com/mohae/deepcopy"
-	"github.com/project-flogo/core/data/coerce"
 )
 
 func DeepCopy(data interface{}) interface{} {

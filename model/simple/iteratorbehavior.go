@@ -5,12 +5,12 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/coerce"
-	"github.com/project-flogo/core/data/expression"
-	"github.com/project-flogo/flow/instance"
-	"github.com/project-flogo/flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 )
 
 // SimpleIteratorTask implements model.TaskBehavior

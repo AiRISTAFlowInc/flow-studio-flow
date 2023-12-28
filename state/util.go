@@ -1,6 +1,6 @@
 package state
 
-import "github.com/project-flogo/flow/state/change"
+import "github.com/AiRISTAFlowInc/flow-studio-flow/state/change"
 
 type FlowInfo struct {
 	Id                 string                 `json:"id"`

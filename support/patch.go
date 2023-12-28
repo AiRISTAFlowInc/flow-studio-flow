@@ -1,8 +1,8 @@
 package support
 
 import (
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/mapper"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/mapper"
 )
 
 // Patch contains a set of task patches for a Flow Patch, this

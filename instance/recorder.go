@@ -1,8 +1,9 @@
 package instance
 
 import (
-	"github.com/project-flogo/flow/state"
 	"time"
+
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state"
 )
 
 type stateInstanceRecorder struct {

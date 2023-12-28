@@ -3,9 +3,10 @@ package state
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/project-flogo/flow/state/change"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state/change"
+	"github.com/stretchr/testify/assert"
 )
 
 func CreateTestSteps1() []*Step {

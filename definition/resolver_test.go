@@ -1,9 +1,10 @@
 package definition
 
 import (
-	"github.com/project-flogo/core/data"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestFlowResolver(t *testing.T) {

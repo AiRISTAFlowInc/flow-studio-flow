@@ -3,15 +3,16 @@ package simple
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/flow/definition"
-	"github.com/project-flogo/flow/model"
+	"testing"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"testing"
 )
 func init() {
 	_ = activity.LegacyRegister("log", NewLogActivity())

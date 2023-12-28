@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/service"
 	"github.com/julienschmidt/httprouter"
-	"github.com/project-flogo/core/data/coerce"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/core/support/service"
-	"github.com/project-flogo/flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
 )
 
 func init() {

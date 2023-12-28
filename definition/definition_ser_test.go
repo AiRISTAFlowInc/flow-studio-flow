@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/expression"
-	_ "github.com/project-flogo/core/data/expression/script"
-	"github.com/project-flogo/core/data/mapper"
-	"github.com/project-flogo/core/data/metadata"
-	flowUtil "github.com/project-flogo/flow/util"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
+	_ "github.com/AiRISTAFlowInc/flow-studio-core/data/expression/script"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/mapper"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	flowUtil "github.com/AiRISTAFlowInc/flow-studio-flow/util"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -289,14 +289,14 @@ func validate(t *testing.T, defJson string) {
 
 	ac := task.ActivityConfig()
 	assert.NotNil(t, ac)
-	assert.Equal(t, "github.com/project-flogo/flow/definition", ac.Ref())
+	assert.Equal(t, "github.com/AiRISTAFlowInc/flow-studio-flow/definition", ac.Ref())
 
 	task = def.GetTask("LogSingle")
 
 	assert.NotNil(t, task)
 	ac = task.ActivityConfig()
 	assert.NotNil(t, ac)
-	assert.Equal(t, "github.com/project-flogo/flow/definition", ac.Ref())
+	assert.Equal(t, "github.com/AiRISTAFlowInc/flow-studio-flow/definition", ac.Ref())
 
 	assert.Nil(t, task.LoopConfig())
 	assert.Nil(t, task.RetryOnErrConfig())
@@ -324,7 +324,7 @@ func validate(t *testing.T, defJson string) {
 
 	ac = task.ActivityConfig()
 	assert.NotNil(t, ac)
-	assert.Equal(t, "github.com/project-flogo/flow/definition", ac.Ref())
+	assert.Equal(t, "github.com/AiRISTAFlowInc/flow-studio-flow/definition", ac.Ref())
 
 }
 

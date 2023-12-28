@@ -3,9 +3,9 @@ package instance
 import (
 	"testing"
 
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/resolve"
-	"github.com/project-flogo/flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/resolve"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
 	"github.com/stretchr/testify/assert"
 )
 

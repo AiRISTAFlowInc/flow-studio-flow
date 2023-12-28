@@ -3,10 +3,11 @@ package simple
 import (
 	"errors"
 	"fmt"
-	"github.com/project-flogo/flow/instance"
 	"time"
 
-	"github.com/project-flogo/flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
+
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 )
 
 // constants for retry data

@@ -3,8 +3,8 @@ package instance
 import (
 	"testing"
 
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 	"github.com/stretchr/testify/assert"
 )
 

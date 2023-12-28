@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/support/trace"
-	"github.com/project-flogo/flow/definition"
-	"github.com/project-flogo/flow/instance"
-	"github.com/project-flogo/flow/model"
-	"github.com/project-flogo/flow/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/trace"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
 )
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

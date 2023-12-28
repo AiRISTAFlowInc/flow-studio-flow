@@ -4,14 +4,14 @@
   "version": "0.0.1",
   "appModel": "1.0.0",
   "imports": [
-    "github.com/project-flogo/flow",
-    "github.com/project-flogo/contrib/trigger/rest",
-    "github.com/project-flogo/contrib/activity/log"
+    "github.com/AiRISTAFlowInc/flow-studio-flow",
+    "github.com/AiRISTAFlowInc/flow-studio-contrib/trigger/rest",
+    "github.com/AiRISTAFlowInc/flow-studio-contrib/activity/log"
   ],
   "triggers": [
     {
       "id": "receive_http_message",
-      "ref": "github.com/project-flogo/contrib/trigger/rest",
+      "ref": "github.com/AiRISTAFlowInc/flow-studio-contrib/trigger/rest",
       "name": "Receive HTTP Message",
       "settings": {
         "port": "8888"
@@ -23,12 +23,12 @@
             "path": "/test/:val"
           },
           "action": {
-            "ref": "github.com/project-flogo/flow",
+            "ref": "github.com/AiRISTAFlowInc/flow-studio-flow",
             "settings": {
               "flowURI": "res://flow:log"
             },
             "input": {
-              "in" : "=$.pathParams.val"
+              "in": "=$.pathParams.val"
             }
           }
         }
@@ -72,8 +72,8 @@
         ],
         "links": [
           {
-            "from":"log_1",
-            "to":"log_2"
+            "from": "log_1",
+            "to": "log_2"
           }
         ]
       }

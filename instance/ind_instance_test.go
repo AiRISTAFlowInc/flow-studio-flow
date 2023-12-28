@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
 	"github.com/stretchr/testify/assert"
 )
 func init() {

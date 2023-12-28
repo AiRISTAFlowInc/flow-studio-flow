@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/project-flogo/flow/state"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state"
 
-	"github.com/project-flogo/core/support"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/core/support/trace"
-	"github.com/project-flogo/flow/definition"
-	"github.com/project-flogo/flow/model"
-	flowsupport "github.com/project-flogo/flow/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/trace"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
+	flowsupport "github.com/AiRISTAFlowInc/flow-studio-flow/support"
 )
 
 type IndependentInstance struct {

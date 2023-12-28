@@ -1,8 +1,8 @@
 package model
 
 import (
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
 )
 
 // FlowContext is the execution context of the Flow when executing

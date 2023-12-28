@@ -2,8 +2,9 @@ package state
 
 import (
 	"fmt"
-	"github.com/project-flogo/core/data/coerce"
 	"strings"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
 )
 
 type RecordingMode string

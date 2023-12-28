@@ -3,13 +3,14 @@ package ondemand
 import (
 	"context"
 	"encoding/json"
-	"github.com/project-flogo/core/support/test"
 	"testing"
 
-	"github.com/project-flogo/core/action"
-	_ "github.com/project-flogo/core/support/test"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/test"
 
-	"github.com/project-flogo/core/engine/runner"
+	"github.com/AiRISTAFlowInc/flow-studio-core/action"
+	_ "github.com/AiRISTAFlowInc/flow-studio-core/support/test"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/engine/runner"
 	"github.com/stretchr/testify/assert"
 )
 

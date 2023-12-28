@@ -3,14 +3,15 @@ package instance
 import (
 	"errors"
 	"fmt"
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/coerce"
-	"github.com/project-flogo/core/data/expression"
-	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/flow/definition"
-	"github.com/project-flogo/flow/support"
 	"strconv"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
 )
 
 func applySettingsMapper(taskInst *TaskInst) error {

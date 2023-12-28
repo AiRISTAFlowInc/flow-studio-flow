@@ -1,7 +1,7 @@
 package definition
 
 import (
-	"github.com/project-flogo/core/data/expression"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
 )
 
 var exprFactory expression.Factory

@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/project-flogo/core/app/resource"
-	"github.com/project-flogo/core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/app/resource"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/expression"
-	"github.com/project-flogo/core/data/mapper"
-	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/core/data/schema"
-	"github.com/project-flogo/core/support"
-	"github.com/project-flogo/core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/mapper"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/schema"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
 )
 
 // Definition is the object that describes the definition of

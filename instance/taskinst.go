@@ -2,18 +2,19 @@ package instance
 
 import (
 	"fmt"
-	"github.com/project-flogo/flow/support"
 	"runtime/debug"
 	"time"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/coerce"
-	"github.com/project-flogo/core/data/schema"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/core/support/trace"
-	"github.com/project-flogo/flow/definition"
-	"github.com/project-flogo/flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
+
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/schema"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/trace"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
 )
 
 func NewTaskInst(flowInst *Instance, task *definition.Task) *TaskInst {

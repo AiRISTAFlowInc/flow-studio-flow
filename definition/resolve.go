@@ -3,10 +3,10 @@ package definition
 import (
 	"fmt"
 
-	"github.com/project-flogo/core/data"
-	"github.com/project-flogo/core/data/path"
-	"github.com/project-flogo/core/data/property"
-	"github.com/project-flogo/core/data/resolve"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/path"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/property"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/resolve"
 )
 
 var defResolver = resolve.NewCompositeResolver(map[string]resolve.Resolver{

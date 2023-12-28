@@ -4,9 +4,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/project-flogo/core/activity"
-	"github.com/project-flogo/core/data/metadata"
-	"github.com/project-flogo/flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-core/activity"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/metadata"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
 )
 
 func init() {

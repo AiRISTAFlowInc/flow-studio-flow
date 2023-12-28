@@ -6,15 +6,15 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/project-flogo/flow/instance"
-	"github.com/project-flogo/flow/support"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
 )
 
-const FlowRef = "github.com/project-flogo/flow"
+const FlowRef = "github.com/AiRISTAFlowInc/flow-studio-flow"
 
 var testFlowActionCfg = `{
  "id": "flow",
- "ref": "github.com/project-flogo/flow",
+ "ref": "github.com/AiRISTAFlowInc/flow-studio-flow",
  "metadata": {
    "input": [],
    "output": []
@@ -36,7 +36,7 @@ var testFlowActionCfg = `{
          "description": "Simple Log Activity",
          "type": 1,
          "activityType": "log",
-         "activityRef": "github.com/project-flogo/contrib/activity/log",
+         "activityRef": "github.com/AiRISTAFlowInc/flow-studio-contrib/activity/log",
          "attributes": [
            {
              "name": "message",
@@ -64,7 +64,7 @@ var testFlowActionCfg = `{
          "description": "Simple Log Activity",
          "type": 1,
          "activityType": "log",
-         "activityRef": "github.com/project-flogo/contrib/activity/log",
+         "activityRef": "github.com/AiRISTAFlowInc/flow-studio-contrib/activity/log",
          "attributes": [
            {
              "name": "message",

@@ -3,7 +3,7 @@ package state
 import (
 	"time"
 
-	"github.com/project-flogo/flow/state/change"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state/change"
 )
 
 type Step struct {

@@ -3,15 +3,15 @@ package tester
 import (
 	"context"
 
-	"github.com/project-flogo/core/action"
-	"github.com/project-flogo/core/engine/runner"
-	"github.com/project-flogo/core/support/log"
-	"github.com/project-flogo/flow/instance"
-	"github.com/project-flogo/flow/support"
+	"github.com/AiRISTAFlowInc/flow-studio-core/action"
+	"github.com/AiRISTAFlowInc/flow-studio-core/engine/runner"
+	"github.com/AiRISTAFlowInc/flow-studio-core/support/log"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/instance"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/support"
 )
 
 const (
-	RefFlow = "github.com/project-flogo/flow"
+	RefFlow = "github.com/AiRISTAFlowInc/flow-studio-flow"
 )
 
 // RequestProcessor processes request objects and invokes the corresponding

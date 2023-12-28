@@ -1,10 +1,10 @@
 package instance
 
 import (
-	"github.com/project-flogo/flow/model"
-	"github.com/project-flogo/flow/state"
-	"github.com/project-flogo/flow/state/change"
-	"github.com/project-flogo/flow/util"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/model"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/state/change"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/util"
 )
 
 var defaultChgTracker = &NoopChangeTracker{}

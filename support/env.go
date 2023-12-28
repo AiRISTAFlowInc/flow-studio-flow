@@ -3,8 +3,8 @@ package support
 import (
 	"os"
 
-	"github.com/project-flogo/core/data/coerce"
-	"github.com/project-flogo/core/engine"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/coerce"
+	"github.com/AiRISTAFlowInc/flow-studio-core/engine"
 )
 
 const (

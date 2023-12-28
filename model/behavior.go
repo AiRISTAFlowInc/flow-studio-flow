@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/project-flogo/flow/definition"
+	"github.com/AiRISTAFlowInc/flow-studio-flow/definition"
 )
 
 // TaskEntry is a struct used to specify what Task to

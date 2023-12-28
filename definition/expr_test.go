@@ -3,9 +3,8 @@ package definition
 import (
 	"testing"
 
-
-	"github.com/project-flogo/core/data/expression"
-	"github.com/project-flogo/core/data/resolve"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/expression"
+	"github.com/AiRISTAFlowInc/flow-studio-core/data/resolve"
 	"github.com/stretchr/testify/assert"
 )
 

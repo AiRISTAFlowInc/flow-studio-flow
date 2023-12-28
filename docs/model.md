@@ -1,23 +1,22 @@
 # Flow Model
 
+The Flow Model is used to define a basic process flow. The flow is essentially a DAG (Directed Acyclic Graph), which basically means it is a directed graph with no cycles. You can think of it as a flow chart with no lines looping back. A graph typically consist of nodes and edges. In this model, Tasks are the equivalent of nodes and Links are directed edges. Tasks are associated with Flogo Activities and this structure is used to orchestrate those activities. This basically allows you to create an application using a simple json or you can use our UI to compose the flow.
 
-The Flow Model is used to define a basic process flow.  The flow is essentially a DAG (Directed Acyclic Graph), which basically means it is a directed graph with no cycles.  You can think of it as a flow chart with no lines looping back.  A graph typically consist of nodes and edges.  In this model, Tasks are the equivalent of nodes and Links are directed edges.  Tasks are associated with Flogo Activities and this structure is used to orchestrate those activities.  This basically allows you to create an application using a simple json or you can use our UI to compose the flow.
-
-The model also provides some additional task constructs to get around some of the limitations of a simple DAG.  For example, there are both Iterator and DoWhile tasks that can be used to create looping constructs.  These are used to loop over a specified activity.  If more complex logic is needed within that loop, one can also the [Subflow](activity/subflow/README.md) activity which can run another flow.
+The model also provides some additional task constructs to get around some of the limitations of a simple DAG. For example, there are both Iterator and DoWhile tasks that can be used to create looping constructs. These are used to loop over a specified activity. If more complex logic is needed within that loop, one can also the [Subflow](activity/subflow/README.md) activity which can run another flow.
 
 ## JSON DSL
+
 Sections:
 
+- [Metadata](#metadata "Goto Metadata") - Flow Input/Output Metadata
+- [Tasks](#tasks "Goto Tasks") - Flow Tasks
+- [Links](#links "Goto Links") - Flow Links
+- [ErrorHandler](#errorHandler "Goto ErrorHandler") - Flow Error Handler
 
-* [Metadata](#metadata "Goto Metadata") - Flow Input/Output Metadata
-* [Tasks](#tasks "Goto Tasks") - Flow Tasks
-* [Links](#links "Goto Links") - Flow Links
-* [ErrorHandler](#errorHandler "Goto ErrorHandler") - Flow Error Handler
-    
-[Full Example](#full-example "Full Example") 
-
+[Full Example](#full-example "Full Example")
 
 ## Metadata
+
 The `metadata` section allows one to define all inputs and outputs of a flow.
 
 ```json
@@ -32,15 +31,14 @@ The `metadata` section allows one to define all inputs and outputs of a flow.
     {
       "name": "out",
       "type": "string"
-    }  
+    }
   ]
 }
 ```
 
-
-
 ## Tasks
-The `tasks` section allows one to define the tasks that are part of the flow. Tasks are associated with the Flogo activity you would like to execute.  In this case a log activity.
+
+The `tasks` section allows one to define the tasks that are part of the flow. Tasks are associated with the Flogo activity you would like to execute. In this case a log activity.
 
 ```json
 "tasks": [
@@ -59,41 +57,41 @@ The `tasks` section allows one to define the tasks that are part of the flow. Ta
 ```
 
 ### Loops
-There are special types of tasks that can be part of a flow.  There are currently two task types that are for used for creating loop constructs: Iterator and DoWhile.
+
+There are special types of tasks that can be part of a flow. There are currently two task types that are for used for creating loop constructs: Iterator and DoWhile.
 
 #### Iterator Task
-An `iterator` lets you iterate for a specified count or over an array, map or object. 
 
-Iterators take an `iterateOn` setting.  This value indicates what you are iterating on.  It can be set to a number or use a mapping that evaluates to an object.  It also takes an optional `delay` setting that can be used to set a delay in millseconds between iterations.
+An `iterator` lets you iterate for a specified count or over an array, map or object.
+
+Iterators take an `iterateOn` setting. This value indicates what you are iterating on. It can be set to a number or use a mapping that evaluates to an object. It also takes an optional `delay` setting that can be used to set a delay in millseconds between iterations.
 
 The current key and value of an iteration is access via `$iteration[key]` and `$iteration[value]` respectively.
 
-***Count Example:***
- 
+**_Count Example:_**
+
 In this example, we are going to perform 10 iterations on this activity. This is achieved by setting the `iterateOn` value to `10`.
 
-
- 
 ```json
 {
-	"id": "loop_log",
-	"name": "Loop Log",
-	"type": "iterator",
-	"settings": {
-		"iterateOn": 10,
-		"delay": 5
-	},
-	"activity": {
-		"ref": "#log",
-		"input": {
-			"message": "=$iteration[key]"
-		}
-	}
+  "id": "loop_log",
+  "name": "Loop Log",
+  "type": "iterator",
+  "settings": {
+    "iterateOn": 10,
+    "delay": 5
+  },
+  "activity": {
+    "ref": "#log",
+    "input": {
+      "message": "=$iteration[key]"
+    }
+  }
 }
 ```
 
-***Object Example:***  
- 
+**_Object Example:_**
+
 ```json
 {
 	"id": "loop_log",
@@ -112,14 +110,15 @@ In this example, we are going to perform 10 iterations on this activity. This is
 }
 ```
 
-*Note:  `$iteration[index]` is also available to get the index of the current iteration.*
+_Note: `$iteration[index]` is also available to get the index of the current iteration._
 
 #### DoWhile Task
+
 A `doWhile` task lets you loop over an activity using a conditional expression to determine how often to loop.
 
-DoWhile tasks take a `condition` setting which is where the conditional expression is specified.  It also takes an optional `delay` setting that can be used to set a delay in millseconds between iterations.
+DoWhile tasks take a `condition` setting which is where the conditional expression is specified. It also takes an optional `delay` setting that can be used to set a delay in millseconds between iterations.
 
-*Note:  `$iteration[index]` is also available to get the index of the current iteration of the doWhile loop.*
+_Note: `$iteration[index]` is also available to get the index of the current iteration of the doWhile loop._
 
 ```json
 {
@@ -139,7 +138,8 @@ DoWhile tasks take a `condition` setting which is where the conditional expressi
 ```
 
 #### Accumulate
-Both `iterate` and `doWhile` tasks support an `accumlate` setting.  If this setting is enabled, all the outputs of the invoked activity are accumulated in an array.
+
+Both `iterate` and `doWhile` tasks support an `accumlate` setting. If this setting is enabled, all the outputs of the invoked activity are accumulated in an array.
 
 To Enable:
 
@@ -160,23 +160,23 @@ To Enable:
 Access Accumlated Values:
 
 ```json
-  {
-    "id": "log",
-    "name": "Log",
-    "activity": {
-      "ref": "#log",
-      "input": {
-        "message": "=$activity[RESTInvoke][0]"
-      }
+{
+  "id": "log",
+  "name": "Log",
+  "activity": {
+    "ref": "#log",
+    "input": {
+      "message": "=$activity[RESTInvoke][0]"
     }
   }
+}
 ```
 
-*Note: This logs the output of the first iteration*
+_Note: This logs the output of the first iteration_
 
 ### Retry
 
-When an activity encounters an error, they may report that error is "Retriable".  In that case a `retryOnError ` setting can be set on the task that tells it to retry those errors.  You can indicate both how many retries and the iterval in milliseconds in which to retry.
+When an activity encounters an error, they may report that error is "Retriable". In that case a `retryOnError ` setting can be set on the task that tells it to retry those errors. You can indicate both how many retries and the iterval in milliseconds in which to retry.
 
 ```
 {
@@ -195,7 +195,8 @@ When an activity encounters an error, they may report that error is "Retriable".
 ```
 
 ## Links
-The `links` section allows one to define the links in the flow.  The links are used to define how one tasks connects to another.  In the following example we are indicating that task `log_2` comes after task `log_1`.  
+
+The `links` section allows one to define the links in the flow. The links are used to define how one tasks connects to another. In the following example we are indicating that task `log_2` comes after task `log_1`.
 
 ```json
 "links": [
@@ -207,7 +208,8 @@ The `links` section allows one to define the links in the flow.  The links are u
 ```
 
 #### Conditional/Expression Links
-We can also have conditional links.  These are links that have a conditional expression and are only followed if that expression evaluates to true.
+
+We can also have conditional links. These are links that have a conditional expression and are only followed if that expression evaluates to true.
 
 ```json
 "links": [
@@ -221,6 +223,7 @@ We can also have conditional links.  These are links that have a conditional exp
 ```
 
 #### Otherwise Expression Links
+
 When using conditional links, you might want to have a link that gets followed only if none of your conditional links evaluated to true. In this case you would use the "otherwise" link.
 
 ```json
@@ -234,7 +237,8 @@ When using conditional links, you might want to have a link that gets followed o
 ```
 
 #### Error Links
-Error links can be used to explicitly handle errors from specific tasks.  When an error link is present, and there is an error, that link will be followed instead of escalating to the global error handler.
+
+Error links can be used to explicitly handle errors from specific tasks. When an error link is present, and there is an error, that link will be followed instead of escalating to the global error handler.
 
 ```json
 "links": [
@@ -247,16 +251,17 @@ Error links can be used to explicitly handle errors from specific tasks.  When a
 ```
 
 ## ErrorHandler
-The `errorHandler` section is used to define the global error handler for the flow.  If an error occurs that isn't explicitly handled by a task/error link, the error is escalted to the errorHandler.  The error handler is like a mini "flow", it has both a `tasks` and `links` section.
- 
+
+The `errorHandler` section is used to define the global error handler for the flow. If an error occurs that isn't explicitly handled by a task/error link, the error is escalted to the errorHandler. The error handler is like a mini "flow", it has both a `tasks` and `links` section.
+
 ```json
 "errorHandler": {
    "tasks": [
-      { 
+      {
          "id":"SecondLog",
-         "activity":{ 
+         "activity":{
              "ref":"github.com/TIBCOSoftware/flogo-contrib/activity/log",
-             "input":{ 
+             "input":{
                  "message": "log in error handler"
              },
              "output":{ },
@@ -266,11 +271,12 @@ The `errorHandler` section is used to define the global error handler for the fl
    ]
 }
 ```
-*Note:  When an unhandled error occurs, if an errorHandler isn't defined in the flow, the flow automatically fails and returns an error.*
 
+_Note: When an unhandled error occurs, if an errorHandler isn't defined in the flow, the flow automatically fails and returns an error._
 
 ## Full Example
-Sample flogo application configuration file. 
+
+Sample flogo application configuration file.
 
 ```json
 {
@@ -280,9 +286,9 @@ Sample flogo application configuration file.
   "appModel": "1.0.0",
   "description": "My flogo application description",
   "imports": [
-    "github.com/project-flogo/flow",
-    "github.com/project-flogo/contrib/trigger/rest",
-    "github.com/project-flogo/contrib/activity/log"
+    "github.com/AiRISTAFlowInc/flow-studio-flow",
+    "github.com/AiRISTAFlowInc/flow-studio-contrib/trigger/rest",
+    "github.com/AiRISTAFlowInc/flow-studio-contrib/activity/log"
   ],
   "triggers": [
     {
@@ -321,13 +327,11 @@ Sample flogo application configuration file.
         "description": "Example description",
         "metadata": {
           "input": [
-            { "name":"customerId", "type":"string" },
-            { "name":"orderId", "type":"string" },
-            { "name":"orderType", "type":"string" }
+            { "name": "customerId", "type": "string" },
+            { "name": "orderId", "type": "string" },
+            { "name": "orderType", "type": "string" }
           ],
-          "output":[
-            { "name":"value", "type":"string" }
-          ]
+          "output": [{ "name": "value", "type": "string" }]
         },
         "tasks": [
           {
@@ -347,7 +351,7 @@ Sample flogo application configuration file.
           {
             "id": "SecondLog",
             "name": "SecondLog",
-            "activity" : {
+            "activity": {
               "ref": "#log",
               "input": {
                 "message": "test message"
